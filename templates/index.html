@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Welcome to Datalyzer</h1>
+    <p>Select a data structure to visualize:</p>
+    <ul>
+        <li><a href="{{ url_for('stack') }}">Stack</a></li>
+        <li><a href="{{ url_for('queue') }}">Queue</a></li>
+        <!-- will be adding other data structures as we build -->
+    </ul>
+{% endblock %}
