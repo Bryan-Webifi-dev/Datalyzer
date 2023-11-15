@@ -26,8 +26,27 @@ footer {
 
 /* Main Content Styles */
 main {
-    padding: 2rem;
+    padding: 0rem;
     min-height: 80vh; /* Adjust height as per your layout */
+}
+
+.img-bordered-shadow {
+    border: 3px solid #ccc; /* grey-300 color */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15); /* Bootstrap-like shadow */
+}
+
+.background-container {
+    position: relative;
+    background: url('/static/images/data-structures1.png') no-repeat center center;
+    background-size: cover;
+    height: 94vh; /* Full height of the viewport */
+}
+
+.text-on-image {
+    position: relative;
+    top: 20%; /* Center vertically */
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255); /* Adjust text color for visibility */
 }
 
 
