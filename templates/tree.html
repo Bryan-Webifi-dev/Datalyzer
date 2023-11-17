@@ -2,12 +2,16 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2>Tree Visualization</h2>
-    <div id="tree-visualization">
-        <!-- Tree nodes will be added here -->
+    <h2 class="text-center">Tree Visualization</h2>
+    <div id="tree-visualization" class="tree-container">
+        <!-- Tree nodes will be dynamically added here -->
     </div>
-    <button id="add-node-btn" class="btn btn-primary mt-2">Add Node</button>
-    <button id="remove-node-btn" class="btn btn-danger mt-2">Remove Node</button>
+    <div class="text-center mt-4">
+        <input type="text" id="tree-input" class="form-control mb-2" placeholder="Enter a value">
+        <button id="add-node-btn" class="btn btn-primary">Add Node</button>
+        <!-- Removing nodes in a tree can be complex and might need a different approach -->
+    </div>
 </div>
 {% endblock %}
 
+<script src="{{ url_for('static', filename='js/tree.js') }}"></script>

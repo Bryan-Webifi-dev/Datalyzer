@@ -116,4 +116,25 @@ main {
     box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
 }
 
+.tree-container {
+    border: 1px solid #757575;
+    min-height: 200px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
+}
+
+.tree-node {
+    background-color: rgb(30, 27, 68);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+}
 
