@@ -73,12 +73,12 @@ main {
 }
 
 .queue-container {
-    border: 1px solid #757575;
+    border: 1px solid #b8b8b8;
     min-height: 200px;
     margin-top: 20px;
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    overflow-x: auto; /* Allows scrolling horizontally if many elements are added */
     box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
     border-radius: 0.35rem;
 }
@@ -89,6 +89,28 @@ main {
     margin: 5px;
     padding: 10px;
     width: 100px;
+    text-align: center;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+}
+
+.linked-list-container {
+    border: 1px solid #b8b8b8;
+    min-height: 200px;
+    margin-top: 20px;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.linked-list-node {
+    background-color: rgb(30, 27, 68);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    min-width: 100px;
     text-align: center;
     border-radius: 0.35rem;
     box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
