@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Linked List Visualization</h2>
+    <div id="linked-list-visualization" class="linked-list-container">
+        <!-- Nodes will be dynamically added here -->
+    </div>
+    <div class="text-center mt-4">
+        <input type="text" id="linked-list-input" class="form-control mb-2" placeholder="Enter a value">
+        <button id="add-node-btn" class="btn btn-primary">Add Node</button>
+        <button id="remove-node-btn" class="btn btn-danger">Remove Node</button>
+    </div>
+</div>
+{% endblock %}
+
+<script src="{{ url_for('static', filename='js/linkedList.js') }}"></script>

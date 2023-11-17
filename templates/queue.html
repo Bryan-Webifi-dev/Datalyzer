@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Queue Visualization</h2>
+    <div id="queue-visualization" class="queue-container">
+        <!-- Elements will be dynamically added here -->
+    </div>
+    <div class="text-center mt-4">
+        <button id="enqueue-btn" class="btn btn-primary">Enqueue</button>
+        <button id="dequeue-btn" class="btn btn-danger">Dequeue</button>
+    </div>
+</div>
+{% endblock %}
+
+<script src="{{ url_for('static', filename='js/queue.js') }}"></script>

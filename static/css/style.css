@@ -49,4 +49,49 @@ main {
     color: rgb(255, 255, 255); /* Adjust text color for visibility */
 }
 
+.stack-container {
+    border: 1px solid #b8b8b8;
+    min-height: 200px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
+}
+
+.stack-element {
+    background-color: rgb(30, 27, 68);
+    color: rgb(255, 255, 255); 
+    margin: 5px;
+    padding: 10px;
+    margin-bottom: 35px;
+    width: 100px;
+    text-align: center;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+}
+
+.queue-container {
+    border: 1px solid #757575;
+    min-height: 200px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Allows scrolling horizontally if many elements are added */
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
+}
+
+.queue-element {
+    background-color: rgb(30, 27, 68);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+}
+
 

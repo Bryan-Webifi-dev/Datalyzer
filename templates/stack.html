@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Stack Visualization</h2>
+    <div id="stack-visualization" class="stack-container">
+        <!-- Elements will be dynamically added here -->
+    </div>
+    <div class="mt-4 text-center">
+        <input type="text" id="stack-input" class="form-control mb-2" placeholder="Enter a value">
+        <button id="push-btn" class="btn btn-primary">Push</button>
+        <button id="pop-btn" class="btn btn-danger">Pop</button>
+    </div>
+</div>
+{% endblock %}
