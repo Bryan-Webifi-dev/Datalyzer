@@ -2,12 +2,16 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2>Graph Visualization</h2>
-    <div id="graph-visualization">
-        <!-- Graph elements will be added here -->
+    <h2 class="text-center">Graph Visualization</h2>
+    <div id="graph-visualization" class="graph-container">
+        <!-- Graph nodes will be dynamically added here -->
     </div>
-    <button id="add-vertex-btn" class="btn btn-primary mt-2">Add Vertex</button>
-    <button id="add-edge-btn" class="btn btn-info mt-2">Add Edge</button>
-    <button id="remove-element-btn" class="btn btn-danger mt-2">Remove Element</button>
+    <div class="text-center mt-4">
+        <input type="text" id="graph-input" class="form-control mb-2" placeholder="Enter node value">
+        <button id="add-node-btn" class="btn btn-primary">Add Node</button>
+        <!-- Additional functionality for adding edges can be added later -->
+    </div>
 </div>
 {% endblock %}
+
+<script src="{{ url_for('static', filename='js/graph.js') }}"></script>
