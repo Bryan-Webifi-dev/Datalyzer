@@ -117,14 +117,14 @@ main {
 }
 
 .tree-container {
-    border: 1px solid #757575;
+    border: 1px solid #b8b8b8;
     min-height: 200px;
     margin-top: 20px;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
-    border-radius: 0.35rem;
 }
 
 .tree-node {
