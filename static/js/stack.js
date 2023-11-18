@@ -4,22 +4,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const popButton = document.getElementById("pop-btn");
     const stackInput = document.getElementById("stack-input");
 
+    function createStackElement(value) {
+        const newElement = document.createElement("div");
+        newElement.classList.add("stack-element", "animate__animated", "animate__fadeInDown");
+        newElement.textContent = value;
+        return newElement;
+    }
+
     pushButton.addEventListener("click", function() {
         const inputValue = stackInput.value.trim();
         if (inputValue) {
-            // Creating a new div element to represent the stack item
-            const newElement = document.createElement("div");
-            newElement.classList.add("stack-element");
-            newElement.textContent = inputValue; // The text inside the div is the user input
-            stackVisualization.appendChild(newElement); // Adding the new element to the top of the stack
-            stackInput.value = ''; // Clearing the input field
+            const newElement = createStackElement(inputValue);
+            stackVisualization.appendChild(newElement);
+            stackInput.value = '';
         }
     });
 
     popButton.addEventListener("click", function() {
-        // Removing the top element of the stack
         if (stackVisualization.lastElementChild) {
-            stackVisualization.removeChild(stackVisualization.lastElementChild);
+            const elementToRemove = stackVisualization.lastElementChild;
+            stackVisualization.removeChild(elementToRemove);
         }
     });
+    
 });
