@@ -1,10 +1,11 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stack.css') }}">
 <div class="container mt-5">
     <div class="row">
         <!-- Instructional Panel -->
-        <div class="col-lg-4 order-lg-2 mb-4">
+        <div class="col-lg-4 mb-4">
             <div id="instruction-panel" class="instruction-panel">
                 <h4>How to Use the Stack</h4>
                 <ol id="instruction-list">
@@ -13,26 +14,27 @@
                     <li>Click 'Pop' to remove the top element from the stack.</li>
                     <!-- Add more instructions as needed -->
                 </ol>
+                <p>Remember: In a stack, the last element added is the first one to be removed (LIFO - Last In, First Out).</p>
             </div>
         </div>
 
         <!-- Stack Visualization -->
-        <div class="col-lg-8 order-lg-1">
+        <div class="col-lg-8">
             <div class="visualization-panel">
                 <h2 class="text-center">Stack Visualization</h2>
                 <div id="stack-visualization" class="stack-container">
                     <!-- Dynamically added stack elements will appear here -->
                 </div>
+                <div id="status-message" class="status-message">
+                    <!-- Status or error messages will be displayed here -->
+                </div>
                 <div class="text-center mt-4">
-                    <input type="text" id="stack-input" class="form-control mb-2" placeholder="Enter a value">
-                    <button id="push-btn" class="btn btn-primary">Push</button>
-                    <button id="pop-btn" class="btn btn-danger">Pop</button>
+                    <input type="text" id="stack-input" class="form-control mb-2" aria-label="Value to push onto the stack" placeholder="Enter a value">
+                    <button id="push-btn" class="btn btn-primary" aria-label="Push value onto stack">Push</button>
+                    <button id="pop-btn" class="btn btn-danger" aria-label="Pop value from stack">Pop</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="{{ url_for('static', filename='js/stack.js') }}"></script>
 {% endblock %}
-
-

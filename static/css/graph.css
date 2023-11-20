@@ -1,0 +1,40 @@
+/* Graph Page Specific Styles */
+
+/* Main container */
+.graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b8b8b8;
+    min-height: 200px;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
+    width: 100%; /* Full width of its column */
+    margin: 20px auto;
+}
+
+.graph-node {
+    background-color: rgb(30, 27, 68);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    position: absolute; /* Consider using a different approach for positioning nodes */
+    cursor: pointer;
+}
+
+/* Input Fields and Buttons */
+#graph-node-input, #source-node-input, #target-node-input, #add-node-btn, #add-edge-btn {
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .graph-container {
+        width: 90%; /* Adjust for smaller screens */
+    }
+}

@@ -1,17 +1,43 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2 class="text-center">Graph Visualization</h2>
-    <div id="graph-visualization" class="graph-container">
-        <!-- Graph nodes will be dynamically added here -->
-    </div>
-    <div class="text-center mt-4">
-        <input type="text" id="graph-input" class="form-control mb-2" placeholder="Enter node value">
-        <button id="add-node-btn" class="btn btn-primary">Add Node</button>
-        <!-- Additional functionality for adding edges can be added later -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/graph.css') }}">
+<div class="container mt-5">
+    <div class="row">
+        <!-- Instructional Panel -->
+        <div class="col-lg-4 mb-4">
+            <div id="instruction-panel" class="instruction-panel">
+                <h4>How to Use the Graph</h4>
+                <ol id="instruction-list">
+                    <li>Add nodes using the node input field.</li>
+                    <li>Add edges by specifying the source and target nodes.</li>
+                    <!-- Add more instructions as needed -->
+                </ol>
+                <p>Graph nodes and edges can be dynamically added and connected.</p>
+            </div>
+        </div>
+
+        <!-- Graph Visualization -->
+        <div class="col-lg-8">
+            <div class="visualization-panel">
+                <h2 class="text-center">Graph Visualization</h2>
+                <div id="graph-visualization" class="graph-container">
+                    <!-- Graph nodes and edges will be dynamically added here -->
+                </div>
+                <div id="status-message" class="status-message">
+                    <!-- Status or error messages will be displayed here -->
+                </div>
+                <div class="text-center mt-4">
+                    <input type="text" id="graph-node-input" class="form-control mb-2" placeholder="Enter node value">
+                    <button id="add-node-btn" class="btn btn-primary">Add Node</button>
+                    <div class="edge-inputs mt-4">
+                        <input type="text" id="source-node-input" class="form-control mb-2" placeholder="Source node">
+                        <input type="text" id="target-node-input" class="form-control mb-2" placeholder="Target node">
+                        <button id="add-edge-btn" class="btn btn-secondary">Add Edge</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
-
-<script src="{{ url_for('static', filename='js/graph.js') }}"></script>

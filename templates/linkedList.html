@@ -1,17 +1,40 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2 class="text-center">Linked List Visualization</h2>
-    <div id="linked-list-visualization" class="linked-list-container">
-        <!-- Nodes will be dynamically added here -->
-    </div>
-    <div class="text-center mt-4">
-        <input type="text" id="linked-list-input" class="form-control mb-2" placeholder="Enter a value">
-        <button id="add-node-btn" class="btn btn-primary">Add Node</button>
-        <button id="remove-node-btn" class="btn btn-danger">Remove Node</button>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/linkedlist.css') }}">
+<div class="container mt-5">
+    <div class="row">
+        <!-- Instructional Panel -->
+        <div class="col-lg-4 mb-4">
+            <div id="instruction-panel" class="instruction-panel">
+                <h4>How to Use the Linked List</h4>
+                <ol id="instruction-list">
+                    <li>Enter a value in the text box to add a node to the list.</li>
+                    <li>Click 'Add Node' to add the element to the list.</li>
+                    <li>Click 'Remove Node' to remove the specified node from the list.</li>
+                    <!-- Add more instructions as needed -->
+                </ol>
+                <p>Nodes in the linked list are connected linearly.</p>
+            </div>
+        </div>
+
+        <!-- Linked List Visualization -->
+        <div class="col-lg-8">
+            <div class="visualization-panel">
+                <h2 class="text-center">Linked List Visualization</h2>
+                <div id="linked-list-visualization" class="linked-list-container">
+                    <!-- Dynamically added nodes will appear here -->
+                </div>
+                <div id="status-message" class="status-message">
+                    <!-- Status or error messages will be displayed here -->
+                </div>
+                <div class="text-center mt-4">
+                    <input type="text" id="linked-list-input" class="form-control mb-2" placeholder="Enter a value">
+                    <button id="add-node-btn" class="btn btn-primary">Add Node</button>
+                    <button id="remove-node-btn" class="btn btn-danger">Remove Node</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
-
-<script src="{{ url_for('static', filename='js/linkedList.js') }}"></script>

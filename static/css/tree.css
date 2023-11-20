@@ -1,0 +1,29 @@
+/* Tree Page Specific Styles */
+.tree-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #b8b8b8;
+    min-height: 200px;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+    border-radius: 0.35rem;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.tree-node {
+    background-color: rgb(30, 27, 68);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
+}
+
+@media (max-width: 768px) {
+    .tree-container {
+        width: 90%;
+    }
+}

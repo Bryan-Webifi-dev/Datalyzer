@@ -1,17 +1,34 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tree.css') }}">
 <div class="container mt-4">
-    <h2 class="text-center">Tree Visualization</h2>
-    <div id="tree-visualization" class="tree-container">
-        <!-- Tree nodes will be dynamically added here -->
-    </div>
-    <div class="text-center mt-4">
-        <input type="text" id="tree-input" class="form-control mb-2" placeholder="Enter a value">
-        <button id="add-node-btn" class="btn btn-primary">Add Node</button>
-        <!-- Removing nodes in a tree can be complex and might need a different approach -->
+    <div class="row">
+        <!-- Instructional Panel -->
+        <div class="col-lg-4">
+            <div id="instruction-panel" class="instruction-panel">
+                <h4>How to Use the Tree</h4>
+                <p>Enter a value and click 'Add Node' to see how nodes are added to a tree.</p>
+                <!-- Additional instructions or diagrams about tree structure -->
+            </div>
+        </div>
+
+        <!-- Tree Visualization -->
+        <div class="col-lg-8">
+            <h2 class="text-center">Tree Visualization</h2>
+            <div id="tree-visualization" class="tree-container">
+                <!-- Tree nodes will be dynamically added here -->
+            </div>
+
+            <div class="text-center mt-4">
+                <input type="text" id="tree-input" class="form-control mb-2" aria-label="Value to add to the tree" placeholder="Enter a value">
+                <button id="add-node-btn" class="btn btn-primary">Add Node</button>
+            </div>
+
+            <div id="status-message" class="status-message">
+                <!-- Status or error messages will be displayed here -->
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
-
-<script src="{{ url_for('static', filename='js/tree.js') }}"></script>

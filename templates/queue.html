@@ -1,16 +1,37 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/queue.css') }}">
 <div class="container mt-4">
-    <h2 class="text-center">Queue Visualization</h2>
-    <div id="queue-visualization" class="queue-container">
-        <!-- Elements will be dynamically added here -->
-    </div>
-    <div class="text-center mt-4">
-        <button id="enqueue-btn" class="btn btn-primary">Enqueue</button>
-        <button id="dequeue-btn" class="btn btn-danger">Dequeue</button>
+    <div class="row">
+        <!-- Instructional Panel -->
+        <div class="col-lg-4">
+            <div id="instruction-panel" class="instruction-panel">
+                <h4>How to Use the Queue</h4>
+                <ol id="instruction-list">
+                    <li>Enter a value in the text box to add to the queue.</li>
+                    <li>Click 'Enqueue' to add the element to the end of the queue.</li>
+                    <li>Click 'Dequeue' to remove the element from the front of the queue.</li>
+                </ol>
+                <p>Remember: In a queue, the first element added is the first one to be removed (FIFO - First In, First Out).</p>
+            </div>
+        </div>
+
+        <!-- Queue Visualization -->
+        <div class="col-lg-8">
+            <h2 class="text-center">Queue Visualization</h2>
+            <div id="queue-visualization" class="queue-container">
+                <!-- Elements will be dynamically added here -->
+            </div>
+            <div class="text-center mt-4">
+                <input type="text" id="queue-input" class="form-control mb-2" aria-label="Value to enqueue" placeholder="Enter a value">
+                <button id="enqueue-btn" class="btn btn-primary">Enqueue</button>
+                <button id="dequeue-btn" class="btn btn-danger">Dequeue</button>
+            </div>
+            <div id="status-message" class="status-message">
+                <!-- Status or error messages will be displayed here -->
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
-
-<script src="{{ url_for('static', filename='js/queue.js') }}"></script>
