@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+
+<div class="container mt-5">
+    <h2 class="text-center">Comprehensive Data Structures Quiz</h2>
+
+    <!-- Comprehensive Quiz -->
+    <div class="quiz-container">
+        <div id="questionCounter">1/12</div>
+        <form id="dataStructuresQuiz">
+            <!-- Stack Question -->
+            <div class="quiz-question" data-topic="Stack" id="question1">
+                <label>Which operation is used to add an element in a stack?</label><br>
+                <input type="radio" name="question1" value="correct" id="stack1"><label for="stack1">A. Push</label><br>
+                <input type="radio" name="question1" value="wrong" id="stack2"><label for="stack2">B. Pop</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Queue Question -->
+            <div class="quiz-question" data-topic="Queue" id="question2">
+                <label>In a queue, the operation of adding an element is known as?</label><br>
+                <input type="radio" name="question2" value="correct" id="queue1"><label for="queue1">A. Enqueue</label><br>
+                <input type="radio" name="question2" value="wrong" id="queue2"><label for="queue2">B. Dequeue</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Stack Question -->
+            <div class="quiz-question" data-topic="Stack" id="question3">
+                <label>What data structure is used for depth-first search?</label><br>
+                <input type="radio" name="question3" value="wrong" id="dfs1"><label for="dfs1">A. Queue</label><br>
+                <input type="radio" name="question3" value="correct" id="dfs2"><label for="dfs2">B. Stack</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Tree Question -->
+            <div class="quiz-question" data-topic="Tree" id="question4">
+                <label>Which data structure uses a root node to represent a hierarchy?</label><br>
+                <input type="radio" name="question4" value="correct" id="tree1"><label for="tree1">A. Tree</label><br>
+                <input type="radio" name="question4" value="wrong" id="tree2"><label for="tree2">B. Graph</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Graph Question -->
+            <div class="quiz-question" data-topic="Graph" id="question5">
+                <label>Which graph traversal algorithm uses a queue for its implementation?</label><br>
+                <input type="radio" name="question5" value="correct" id="graph1"><label for="graph1">A. Breadth-First Search</label><br>
+                <input type="radio" name="question5" value="wrong" id="graph2"><label for="graph2">B. Depth-First Search</label>
+                <button type="button">Next</button>
+            </div>
+
+            <!-- Queue Question -->
+            <div class="quiz-question" data-topic="Queue" id="question6">
+                <label>In a priority queue, which element is removed first?</label><br>
+                <input type="radio" name="question6" value="correct" id="queue1"><label for="queue1">A. The element with the highest priority</label><br>
+                <input type="radio" name="question6" value="wrong" id="queue2"><label for="queue2">B. The element added most recently</label>
+                <button type="button">Next</button>
+            </div>
+
+            <!-- Linked List Question -->
+            <div class="quiz-question" data-topic="LinkedList" id="question7">
+                <label>In which data structure does each element point to the next element?</label><br>
+                <input type="radio" name="question7" value="correct" id="linked1"><label for="linked1">A. Linked List</label><br>
+                <input type="radio" name="question7" value="wrong" id="linked2"><label for="linked2">B. Stack</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Graph Question -->
+            <div class="quiz-question" data-topic="Graph" id="question8">
+                <label>Which data structure is primarily used in scenarios like network routing?</label><br>
+                <input type="radio" name="question8" value="correct" id="graph1"><label for="graph1">A. Graph</label><br>
+                <input type="radio" name="question8" value="wrong" id="graph2"><label for="graph2">B. Tree</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Stack Question -->
+            <div class="quiz-question" data-topic="Stack" id="question9">
+                <label>What is a common use case for a stack data structure?</label><br>
+                <input type="radio" name="question9" value="correct" id="stackUse1"><label for="stackUse1">A. Undo functionality in text editors</label><br>
+                <input type="radio" name="question9" value="wrong" id="stackUse2"><label for="stackUse2">B. Breadth-first search</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Tree Question -->
+            <div class="quiz-question" data-topic="Tree" id="question10">
+                <label>How is a full binary tree defined?</label><br>
+                <input type="radio" name="question10" value="correct" id="binary1"><label for="binary1">A. A tree where each node has either 0 or 2 children</label><br>
+                <input type="radio" name="question10" value="wrong" id="binary2"><label for="binary2">B. A tree where each node has exactly one child</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Graph Question -->
+            <div class="quiz-question" data-topic="Graph" id="question11">
+                <label>What type of graph allows edges to have direction?</label><br>
+                <input type="radio" name="question11" value="correct" id="directed1"><label for="directed1">A. Directed Graph</label><br>
+                <input type="radio" name="question11" value="wrong" id="directed2"><label for="directed2">B. Undirected Graph</label>
+                <button type="button">Next</button>
+            </div>
+        
+            <!-- Linked List Question -->
+            <div class="quiz-question" data-topic="LinkedList" id="question12">
+                <label>Which of these is not a type of linked list?</label><br>
+                <input type="radio" name="question12" value="correct" id="linkedNot1"><label for="linkedNot1">A. Circular Queue</label><br>
+                <input type="radio" name="question12" value="wrong" id="linkedNot2"><label for="linkedNot2">B. Doubly Linked List</label>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal for Quiz Result -->
+    <div id="scoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="scoreModalContent"></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -34,12 +34,12 @@ main {
     position: relative;
     background: url('/static/images/data-structures1.png') no-repeat center center;
     background-size: cover;
-    height: 94.6vh; /* Full height of the viewport */
+    height: 98.6vh; /* Full height of the viewport */
 }
 
 .text-on-image {
     position: relative;
-    top: 30%; /* Center vertically */
+    top: 40%; /* Center vertically */
     transform: translateY(-50%);
     color: rgb(255, 255, 255); /* Adjust text color for visibility */
 }
