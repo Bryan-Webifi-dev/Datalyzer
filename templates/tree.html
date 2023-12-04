@@ -2,14 +2,14 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/tree.css') }}">
+<script src="path/to/tree.js"></script> <!-- Ensure the JavaScript file is correctly linked -->
 <div class="container mt-4">
     <div class="row">
         <!-- Instructional Panel -->
         <div class="col-lg-4">
             <div id="instruction-panel" class="instruction-panel">
-                <h4>How to Use the Tree</h4>
-                <p>Enter a value and click 'Add Node' to see how nodes are added to a tree.</p>
-                <!-- Additional instructions or diagrams about tree structure -->
+                <h4>Tree Operations</h4>
+                <p>Click 'Add Node' to add nodes to the tree. Click on any node to remove it.</p>
             </div>
         </div>
 
@@ -21,7 +21,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <input type="text" id="tree-input" class="form-control mb-2" aria-label="Value to add to the tree" placeholder="Enter a value">
+                <input type="text" id="tree-input" class="form-control mb-2" placeholder="Enter a value">
                 <button id="add-node-btn" class="btn btn-primary">Add Node</button>
             </div>
 
@@ -32,3 +32,4 @@
     </div>
 </div>
 {% endblock %}
+

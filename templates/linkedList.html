@@ -2,19 +2,20 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/linkedlist.css') }}">
+<script src="path/to/linkedlist.js"></script> <!-- Ensure the JavaScript file is correctly linked -->
 <div class="container mt-5">
     <div class="row">
         <!-- Instructional Panel -->
         <div class="col-lg-4 mb-4">
             <div id="instruction-panel" class="instruction-panel">
-                <h4>How to Use the Linked List</h4>
+                <h4>Linked List Operations</h4>
                 <ol id="instruction-list">
-                    <li>Enter a value in the text box to add a node to the list.</li>
-                    <li>Click 'Add Node' to add the element to the list.</li>
-                    <li>Click 'Remove Node' to remove the specified node from the list.</li>
-                    <!-- Add more instructions as needed -->
+                    <li>Enter a value in the text box to add a node.</li>
+                    <li>Click 'Add Node' to append the node to the list.</li>
+                    <li>Click on any node to remove it from the list.</li>
+                    <li>Click 'Remove Node' to remove the first node.</li>
                 </ol>
-                <p>Nodes in the linked list are connected linearly.</p>
+                <p>Each node is connected linearly in the list.</p>
             </div>
         </div>
 
@@ -23,7 +24,7 @@
             <div class="visualization-panel">
                 <h2 class="text-center">Linked List Visualization</h2>
                 <div id="linked-list-visualization" class="linked-list-container">
-                    <!-- Dynamically added nodes will appear here -->
+                    <!-- Nodes will be dynamically added here -->
                 </div>
                 <div id="status-message" class="status-message">
                     <!-- Status or error messages will be displayed here -->

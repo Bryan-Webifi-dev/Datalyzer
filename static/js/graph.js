@@ -1,14 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const graphVisualization = document.getElementById("graph-visualization");
     const addNodeButton = document.getElementById("add-node-btn");
-    const addEdgeButton = document.getElementById("add-edge-btn");
+    const removeNodeButton = document.getElementById("remove-node-btn");
     const nodeInput = document.getElementById("graph-node-input");
-    const sourceInput = document.getElementById("source-node-input");
-    const targetInput = document.getElementById("target-node-input");
     const statusMessage = document.getElementById("status-message");
 
-    let nodes = {};
-    let edges = [];
+    let nodes = new Set();
 
     function displayMessage(message) {
         statusMessage.textContent = message;
@@ -18,30 +15,33 @@ document.addEventListener("DOMContentLoaded", function() {
         const newNode = document.createElement("div");
         newNode.classList.add("graph-node", "animate__animated", "animate__fadeIn");
         newNode.textContent = value;
+        newNode.setAttribute('data-value', value); // Adding a data attribute for easy identification
         graphVisualization.appendChild(newNode);
-        return newNode;
+        newNode.addEventListener("click", function() {
+            removeNode(value);
+        });
     }
 
     function addNode(nodeValue) {
-        if (nodes[nodeValue]) {
+        if (nodes.has(nodeValue)) {
             displayMessage(`Node ${nodeValue} already exists.`);
             return;
         }
-        nodes[nodeValue] = createGraphNode(nodeValue);
+        nodes.add(nodeValue);
+        createGraphNode(nodeValue);
         displayMessage(`Node ${nodeValue} added.`);
     }
 
-    function addEdge(source, target) {
-        if (!nodes[source] || !nodes[target]) {
-            displayMessage("Both source and target nodes must exist.");
+    function removeNode(nodeValue) {
+        if (!nodes.has(nodeValue)) {
+            displayMessage(`Node ${nodeValue} does not exist.`);
             return;
         }
-        if (edges.find(edge => edge.source === source && edge.target === target)) {
-            displayMessage(`Edge from ${source} to ${target} already exists.`);
-            return;
-        }
-        edges.push({ source, target });
-        displayMessage(`Edge from ${source} to ${target} added.`);
+        nodes.delete(nodeValue);
+        // Updated selector to find the node element
+        const nodeElement = graphVisualization.querySelector(`.graph-node[data-value='${nodeValue}']`);
+        graphVisualization.removeChild(nodeElement);
+        displayMessage(`Node ${nodeValue} removed.`);
     }
 
     addNodeButton.addEventListener("click", function() {
@@ -52,13 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    addEdgeButton.addEventListener("click", function() {
-        const sourceValue = sourceInput.value.trim();
-        const targetValue = targetInput.value.trim();
-        if (sourceValue && targetValue) {
-            addEdge(sourceValue, targetValue);
-            sourceInput.value = '';
-            targetInput.value = '';
+    removeNodeButton.addEventListener("click", function() {
+        const nodeValue = nodeInput.value.trim();
+        if (nodeValue) {
+            removeNode(nodeValue);
+            nodeInput.value = '';
         }
     });
 });

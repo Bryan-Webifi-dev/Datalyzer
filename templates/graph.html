@@ -7,13 +7,13 @@
         <!-- Instructional Panel -->
         <div class="col-lg-4 mb-4">
             <div id="instruction-panel" class="instruction-panel">
-                <h4>How to Use the Graph</h4>
-                <ol id="instruction-list">
-                    <li>Add nodes using the node input field.</li>
-                    <li>Add edges by specifying the source and target nodes.</li>
-                    <!-- Add more instructions as needed -->
-                </ol>
-                <p>Graph nodes and edges can be dynamically added and connected.</p>
+                <h4>Understanding Graphs</h4>
+                <p>Explore the basic concept of a graph, which consists of nodes. You can add and remove nodes to see how a graph is formed.</p>
+                <ul>
+                    <li>Enter a value and click 'Add Node'.</li>
+                    <li>Click on a node directly to remove it.</li>
+                    <li>Alternatively, enter a node value and click 'Remove Node' to delete a specific node.</li>
+                </ul>
             </div>
         </div>
 
@@ -22,7 +22,7 @@
             <div class="visualization-panel">
                 <h2 class="text-center">Graph Visualization</h2>
                 <div id="graph-visualization" class="graph-container">
-                    <!-- Graph nodes and edges will be dynamically added here -->
+                    <!-- Nodes will be dynamically added here -->
                 </div>
                 <div id="status-message" class="status-message">
                     <!-- Status or error messages will be displayed here -->
@@ -30,11 +30,7 @@
                 <div class="text-center mt-4">
                     <input type="text" id="graph-node-input" class="form-control mb-2" placeholder="Enter node value">
                     <button id="add-node-btn" class="btn btn-primary">Add Node</button>
-                    <div class="edge-inputs mt-4">
-                        <input type="text" id="source-node-input" class="form-control mb-2" placeholder="Source node">
-                        <input type="text" id="target-node-input" class="form-control mb-2" placeholder="Target node">
-                        <button id="add-edge-btn" class="btn btn-secondary">Add Edge</button>
-                    </div>
+                    <button id="remove-node-btn" class="btn btn-danger">Remove Node</button>
                 </div>
             </div>
         </div>

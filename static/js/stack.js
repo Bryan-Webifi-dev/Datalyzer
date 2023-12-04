@@ -1,14 +1,15 @@
+// JavaScript for Stack Visualization
 document.addEventListener("DOMContentLoaded", function() {
     const stackVisualization = document.getElementById("stack-visualization");
     const pushButton = document.getElementById("push-btn");
     const popButton = document.getElementById("pop-btn");
     const stackInput = document.getElementById("stack-input");
     const statusMessage = document.getElementById("status-message");
-    const maxStackSize = 10; // Example stack size limit
+    const maxStackSize = 10; // Set a limit for stack size
 
     function createStackElement(value) {
         const newElement = document.createElement("div");
-        newElement.classList.add("stack-element", "animate__animated", "animate__fadeInDown");
+        newElement.classList.add("stack-element");
         newElement.textContent = value;
         return newElement;
     }
@@ -43,6 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
             stackVisualization.removeChild(elementToRemove);
             displayMessage("Element popped from the stack.");
-        }, 500); // Delay to allow animation to complete
+        }, 500); // Delay for animation completion
     });
 });

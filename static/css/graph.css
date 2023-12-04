@@ -22,7 +22,7 @@
     text-align: center;
     border-radius: 0.35rem;
     box-shadow: 0 0.5rem 1rem rgba(82, 82, 82, 0.15);
-    position: absolute; /* Consider using a different approach for positioning nodes */
+    /* position: relative; Consider using a different approach for positioning nodes */
     cursor: pointer;
 }
 
