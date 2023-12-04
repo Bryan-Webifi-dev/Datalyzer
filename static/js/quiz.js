@@ -1,38 +1,40 @@
+// Event listener for when the DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const quizForm = document.getElementById('dataStructuresQuiz');
     let currentQuestionNumber = 1;
 
+    // Function to show the next question
     function showNextQuestion() {
         let currentQuestion = document.getElementById('question' + currentQuestionNumber);
         let nextQuestion = document.getElementById('question' + (currentQuestionNumber + 1));
         const totalQuestions = 12; // Update this with the total number of questions
-    
+
         // Slide out the current question
         currentQuestion.classList.add('slide-out');
-    
+
         // Wait for the slide-out animation to finish
         setTimeout(function() {
             currentQuestion.style.display = 'none';
             currentQuestion.classList.remove('slide-out');
-    
+
             // Show and slide in the next question
             if (nextQuestion) {
                 nextQuestion.style.display = 'block';
                 nextQuestion.classList.add('slide-in');
-    
+
                 // Remove slide-in class to reset the animation
                 setTimeout(() => nextQuestion.classList.remove('slide-in'), 500);
-    
+
                 // Update the question counter for the next question
                 let questionCounter = document.getElementById('questionCounter');
                 questionCounter.textContent = `${currentQuestionNumber + 1}/${totalQuestions}`;
             } else {
                 document.getElementById('submitQuiz').style.display = 'block';
             }
-    
+
             currentQuestionNumber++;
         }, 500);
-    }    
+    }
 
     // Add event listeners to all 'Next' buttons
     const nextButtons = quizForm.querySelectorAll('button[type="button"]');
@@ -70,16 +72,19 @@ document.addEventListener('DOMContentLoaded', function() {
         scoreModal.style.display = 'block';
     }
 
+    // Event listener for when the quiz form is submitted
     quizForm.addEventListener('submit', function(e) {
         e.preventDefault();
         calculateAndShowScore();
     });
 
+    // Event listener for the close button of the score modal
     const closeButton = document.getElementsByClassName('close')[0];
     closeButton.onclick = function() {
         scoreModal.style.display = 'none';
     };
 
+    // Event listener for clicking outside the score modal
     window.onclick = function(event) {
         if (event.target === scoreModal) {
             scoreModal.style.display = 'none';
