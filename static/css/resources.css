@@ -1,0 +1,14 @@
+/* resources.css */
+.resources-list h3 {
+    margin-top: 20px;
+  }
+  
+  .resources-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .resources-list li {
+    margin-bottom: 10px;
+  }
+  

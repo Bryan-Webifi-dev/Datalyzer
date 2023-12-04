@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+<div class="container mt-5">
+    <div class="row">
+        <!-- Resources Content -->
+        <div class="col-lg-12">
+            <div class="resources-content">
+                <h2 class="text-center">Data Structure Resources</h2>
+                <p>Explore our curated list of resources for in-depth knowledge about data structures and algorithms.
+                </br>
+                Found a resource that you thought was helpful? Share it by adding to the resource list below!</p>
+
+                <!-- Resources List -->
+                <div class="resources-list">
+                    <h3>Stack</h3>
+                    <ul>
+                        <li><a href="https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/tutorial/" target="_blank">Basics of Stacks</a> - An introductory guide to stacks by HackerEarth</li>
+                        <li><a href="https://www.youtube.com/watch?v=wjI1WNcIntg" target="_blank">Introduction to Stacks</a> - Neso Academy's video guide on stacks.</li>
+                        <li><a href="https://www.geeksforgeeks.org/stack-data-structure/" target="_blank">Stack Data Structure</a> - A detailed explanation on stacks by GeeksforGeeks.</li>
+                    </ul>
+                
+                    <h3>Queue</h3>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org/queue-data-structure/" target="_blank">Queue Data Structure</a> - Comprehensive guide on queues by GeeksforGeeks.</li>
+                        <li><a href="https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm" target="_blank">Data Structure and Algorithms - Queue</a> - Online tutorial on queues by TutorialsPoint.</li>
+                        <li><a href="https://www.youtube.com/watch?v=wjI1WNcIntg" target="_blank">4.1 Queue in Data Structure</a> - YouTube video introduction to queues.</li>
+                    </ul>
+                
+                    <h3>Tree</h3>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/" target="_blank">Introduction to Tree</a> - GeeksforGeeks tutorial on tree data structures.</li>
+                        <li><a href="https://www.programiz.com/dsa/trees" target="_blank">Tree Data Structure</a> - Programiz guide to trees.</li>
+                        <li><a href="https://www.youtube.com/watch?v=oSWTXtMglKE" target="_blank">Data structures: Introduction to Trees</a> - YouTube video tutorial on trees.</li>
+                    </ul>
+                
+                    <h3>Graph</h3>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" target="_blank">Graph Data Structure And Algorithms</a> - GeeksforGeeks comprehensive guide on graphs.</li>
+                        <li><a href="https://www.programiz.com/dsa/graph" target="_blank">Graph Data Structure</a> - Detailed explanation on graphs by Programiz..</li>
+                        <li><a href="https://www.tutorialspoint.com/data_structures_algorithms/graph_data_structures.htm" target="_blank">Data Structure - Graph Data Structure</a> - Tutorialspoint overview on graphs.</li>
+                    </ul>
+                
+                    <h3>Linked List</h3>
+                    <ul>
+                        <li><a href="https://www.geeksforgeeks.org/data-structures/linked-list/" target="_blank">Linked List Data Structure</a> - GeeksforGeeks guide on linked lists.</li>
+                        <li><a href="https://www.programiz.com/dsa/linked-list" target="_blank">Linked List Data Structure</a> - Programiz tutorial on linked lists.</li>
+                        <li><a href="https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm" target="_blank">Data Structure and Algorithms - Linked List</a> - Tutorialspoint's linked list algorithms.</li>
+                    </ul>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add to your resources page -->
+<div class="resource-submission-form">
+    <h3>Submit a Resource</h3>
+    <form id="resource-form">
+        <input type="text" id="resource-name" placeholder="Resource Name" required>
+        <input type="url" id="resource-url" placeholder="Resource URL" required>
+        <textarea id="resource-description" placeholder="Brief Description" required></textarea>
+        <button type="submit">Submit Resource</button>
+    </form>
+</div>
+{% endblock %}
