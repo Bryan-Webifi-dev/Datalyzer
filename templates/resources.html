@@ -8,9 +8,32 @@
         <div class="col-lg-12">
             <div class="resources-content">
                 <h2 class="text-center">Data Structure Resources</h2>
-                <p>Explore our curated list of resources for in-depth knowledge about data structures and algorithms.
-                </br>
-                Found a resource that you thought was helpful? Share it by adding to the resource list below!</p>
+                <p>Explore our curated list of resources for in-depth knowledge about data structures and algorithms.</p>
+
+                <!-- Trigger Button for Modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resourceModal">
+                    Add Resource
+                </button>
+                
+                <!-- Modal Structure -->
+                <div class="modal fade" id="resourceModal" tabindex="-1" aria-labelledby="resourceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="resourceModalLabel">Submit a Resource</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form id="resource-form">
+                            <input type="text" id="resource-name" class="form-control mb-2" placeholder="Resource Name" required>
+                            <input type="url" id="resource-url" class="form-control mb-2" placeholder="Resource URL" required>
+                            <textarea id="resource-description" class="form-control mb-2" placeholder="Brief Description" required></textarea>
+                            <button type="submit" class="btn btn-primary">Submit Resource</button>
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
                 <!-- Resources List -->
                 <div class="resources-list">
@@ -54,14 +77,4 @@
     </div>
 </div>
 
-<!-- Add to your resources page -->
-<div class="resource-submission-form">
-    <h3>Submit a Resource</h3>
-    <form id="resource-form">
-        <input type="text" id="resource-name" placeholder="Resource Name" required>
-        <input type="url" id="resource-url" placeholder="Resource URL" required>
-        <textarea id="resource-description" placeholder="Brief Description" required></textarea>
-        <button type="submit">Submit Resource</button>
-    </form>
-</div>
 {% endblock %}
