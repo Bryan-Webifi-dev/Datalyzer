@@ -14,7 +14,7 @@ The application is structured into several key components:
 
 ### Technical Overview
 
-The application is built using Flask, a Python web framework, which handles the server-side operations. The frontend is developed with HTML, CSS, and JavaScript, creating an interactive and responsive user interface. The project also uses SQLite for database management, storing user responses and resource information.
+The application is built using Flask, a Python web framework, which handles the server-side operations. The frontend is developed with HTML, CSS, and JavaScript, creating an interactive and responsive user interface. 
 
 ### Files in the Project
 
