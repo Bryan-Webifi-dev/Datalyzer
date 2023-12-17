@@ -2,38 +2,17 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+<!-- Add Bootstrap and jQuery CDNs -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <div class="container mt-5">
     <div class="row">
         <!-- Resources Content -->
         <div class="col-lg-12">
             <div class="resources-content">
                 <h2 class="text-center">Data Structure Resources</h2>
-                <p>Explore our curated list of resources for in-depth knowledge about data structures and algorithms.</p>
-
-                <!-- Trigger Button for Modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resourceModal">
-                    Add Resource
-                </button>
-                
-                <!-- Modal Structure -->
-                <div class="modal fade" id="resourceModal" tabindex="-1" aria-labelledby="resourceModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="resourceModalLabel">Submit a Resource</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                        <form id="resource-form">
-                            <input type="text" id="resource-name" class="form-control mb-2" placeholder="Resource Name" required>
-                            <input type="url" id="resource-url" class="form-control mb-2" placeholder="Resource URL" required>
-                            <textarea id="resource-description" class="form-control mb-2" placeholder="Brief Description" required></textarea>
-                            <button type="submit" class="btn btn-primary">Submit Resource</button>
-                        </form>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                <p class="text-center">Explore our curated list of resources for in-depth knowledge about data structures and algorithms.</p>
 
                 <!-- Resources List -->
                 <div class="resources-list">
