@@ -37,6 +37,7 @@ To run Datalyzer:
 - Install required packages: `pip install -r requirements.txt`
 - Run the application: `python app.py`
 - Access the app in a web browser at `localhost:5000`.
+- NOTE: Had a VERY hard time running this in the cs50 VScode codespace for some reason - let me know of any issues please!! 
 
 ### Conclusion
 
